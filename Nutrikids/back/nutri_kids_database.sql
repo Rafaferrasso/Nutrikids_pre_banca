@@ -3,9 +3,6 @@
 CREATE DATABASE IF NOT EXISTS nutrikids;
 USE nutrikids;
 
--- NÃO usamos mais DROP TABLE para preservar todos os dados em tempo real
--- Isso garante que usuários, curtidas, comentários e receitas não serão perdidos
-
 -- Criar tabela de usuários apenas se não existir (preserva usuários existentes)
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
