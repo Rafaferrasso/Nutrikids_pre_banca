@@ -1,0 +1,190 @@
+/* ===== NUTRI KIDS - CSS BASE ===== */
+
+/* Reset e configurações gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0fefe;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, #a3f7f7 0%, #d0fcfc 100%);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.titulo {
+  font-family: 'Irish Grover', cursive;
+  color: #a44dd8;
+  font-size: 28px;
+  margin: 0;
+}
+
+#btn-menu {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a44dd8;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#btn-menu:hover {
+  background-color: rgba(164, 77, 216, 0.1);
+}
+
+.icone-login img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #a44dd8;
+  transition: transform 0.3s ease;
+}
+
+.icone-login img:hover {
+  transform: scale(1.1);
+}
+
+/* Menu lateral */
+.menu-lateral {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(180deg, #d0fcfc 0%, #a3f7f7 100%);
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+}
+
+.menu-lateral li {
+  margin: 15px 0;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 12px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu-lateral a:hover {
+  background-color: #a44dd8;
+  color: white;
+  transform: translateX(5px);
+}
+
+#btn-voltar {
+  background: linear-gradient(135deg, #a44dd8, #7c3aed);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+#btn-voltar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(164, 77, 216, 0.3);
+}
+
+/* Menu de navegação */
+nav {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  min-width: 250px;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.menu-oculto {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+}
+
+.menu-visivel {
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transform: translateY(-10px) !important;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+}
+
+nav li {
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, #a3f7f7, #e8f5e8);
+  border-left-color: #a44dd8;
+  color: #a44dd8;
+  transform: translateX(5px);
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .menu-lateral {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+  
+  .titulo {
+    font-size: 24px;
+  }
+}

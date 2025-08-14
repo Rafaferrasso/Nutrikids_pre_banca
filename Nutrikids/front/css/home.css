@@ -1,0 +1,185 @@
+/* ===== NUTRI KIDS - PÁGINA INICIAL CSS ===== */
+
+/* Configuração geral */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #aafafc 0%, #a3f7f7 50%, #d0fcfc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(163, 247, 247, 0.3);
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 35%;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Títulos */
+h1 {
+  color: #a44dd8;
+  font-family: 'Irish Grover', cursive;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #5b21b6;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.descricao {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px 0 30px 0;
+  padding: 15px;
+  background: rgba(163, 247, 247, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid #a3f7f7;
+}
+
+.botoes-principais {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.acesso-rapido {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.acesso-rapido p {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+button {
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn-principal {
+  background: linear-gradient(135deg, #a44dd8, #7c3aed);
+  color: white;
+}
+
+.btn-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(164, 77, 216, 0.4);
+}
+
+.btn-secundario {
+  background: linear-gradient(135deg, #a3f7f7, #74c0fc);
+  color: #333;
+}
+
+.btn-secundario:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(163, 247, 247, 0.4);
+}
+
+.btn-feed {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: white;
+  font-size: 13px;
+  padding: 12px 25px;
+}
+
+.btn-feed:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 211, 153, 0.4);
+}
+
+/* Links de navegação */
+a {
+  text-decoration: none;
+  color: #5b21b6;
+  margin-top: 20px;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Campos de formulário */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Ajustes para login e cadastro */
+.login-container, .cadastro-container {
+  padding: 20px;
+}
+
+/* Mensagens */
+.message {
+  color: #f87171;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+  }
+  
+  .descricao {
+    font-size: 14px;
+  }
+}

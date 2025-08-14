@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri Kids</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/feed.css" />
+
+  <link rel="icon" href="../imagem/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <button id="btn-menu">☰</button>
+    <h1 class="titulo">Nutri Kids</h1>
+    <nav id="menu" class="menu-oculto">
+      <ul>
+        <li><a href="feed.html">🏠 Feed Principal</a></li>
+        <li><a href="../categorias/cafe.html">☀️ Café da Manhã</a></li>
+        <li><a href="../categorias/lanche1.html">🍎 Lanche da Manhã</a></li>
+        <li><a href="../categorias/almoco.html">🍽️ Almoço Nutritivo</a></li>
+        <li><a href="../categorias/lanche2.html">🥪 Lanche da Tarde</a></li>
+        <li><a href="../categorias/janta.html">🌙 Janta Alegria</a></li>
+        <li><a href="../categorias/doce.html">🍰 Docinho Nutri</a></li>
+        <li><a href="usuario.html">👤 Meu Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="lista-receitas">      <div class="item-receita" data-id="1" data-user-id="7">
+        <h2 class="nome-receita">Panqueca Divertida</h2>
+        <img src="../imagem/panqueca.jpeg" alt="Panqueca Divertida" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/panqueca.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="2" data-user-id="8">
+        <h2 class="nome-receita">Pãozinho Mágico</h2>
+        <img src="../imagem/paoinfatil.webp" alt="Pãozinho Mágico" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/pao.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="3" data-user-id="7">
+        <h2 class="nome-receita">Salada de Frutas Colorida</h2>
+        <img src="../imagem/fruta.jpeg" alt="Salada de Frutas Colorida" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/frutas.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="4" data-user-id="8">
+        <h2 class="nome-receita">Iogurte com Granola</h2>
+        <img src="../imagem/iogurte.webp" alt="Iogurte com Granola" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/iogurte.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="5" data-user-id="7">
+        <h2 class="nome-receita">Bolo de Chocolate</h2>
+        <img src="../imagem/bolochoc.jpeg" alt="Bolo de Chocolate" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/bolo-chocolate.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="6" data-user-id="8">
+        <h2 class="nome-receita">Salada de Frutas</h2>
+        <img src="../imagem/fruta.jpeg" alt="Salada de Frutas" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/salada-frutas.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="7" data-user-id="7">
+        <h2 class="nome-receita">Muffin de Banana</h2>
+        <img src="../imagem/doce1.png" alt="Muffin de Banana" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/muffin.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="8" data-user-id="8">
+        <h2 class="nome-receita">Vitamina de Frutas</h2>
+        <img src="../imagem/fruta.jpeg" alt="Vitamina de Frutas" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/vitamina.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="9">
+        <h2 class="nome-receita">Sanduíche Natural</h2>
+        <img src="../imagem/sandu.jpeg" alt="Sanduíche Natural" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/sanduiche.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="10">
+        <h2 class="nome-receita">Sopa Nutritiva</h2>
+        <img src="../imagem/sopa.jpeg" alt="Sopa Nutritiva" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/sopa.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="11">
+        <h2 class="nome-receita">Macarrão Colorido</h2>
+        <img src="../imagem/massa.jpeg" alt="Macarrão Colorido" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/macarrao.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="12">
+        <h2 class="nome-receita">Purê Colorido</h2>
+        <img src="../imagem/purecarn.webp" alt="Purê Colorido" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/pure.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="13">
+        <h2 class="nome-receita">Sorvete Caseiro</h2>
+        <img src="../imagem/sorve.jpg" alt="Sorvete Caseiro" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/sorvete.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="14">
+        <h2 class="nome-receita">Pãozinho Especial</h2>
+        <img src="../imagem/paochoc.png" alt="Pãozinho Especial" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/paozinho.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="15">
+        <h2 class="nome-receita">Potinho Surpresa 1</h2>
+        <img src="../imagem/pote.jpg" alt="Potinho Surpresa 1" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/potinho1.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="16">
+        <h2 class="nome-receita">Potinho Surpresa 2</h2>
+        <img src="../imagem/pote2.jpg" alt="Potinho Surpresa 2" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/potinho2.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="17">
+        <h2 class="nome-receita">Potinho Surpresa 3</h2>
+        <img src="../imagem/pote3.jpg" alt="Potinho Surpresa 3" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/potinho3.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="18">
+        <h2 class="nome-receita">Potinho Surpresa 4</h2>
+        <img src="../imagem/pote4.jpg" alt="Potinho Surpresa 4" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/potinho4.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="19">
+        <h2 class="nome-receita">Docinho Especial 3</h2>
+        <img src="../imagem/doce3.jpeg" alt="Docinho Especial 3" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/doce3.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="20">
+        <h2 class="nome-receita">Docinho Especial 4</h2>
+        <img src="../imagem/doce4.jpeg" alt="Docinho Especial 4" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/doce4.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="21">
+        <h2 class="nome-receita">Docinho Especial 5</h2>
+        <img src="../imagem/doce5.jpeg" alt="Docinho Especial 5" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/doce5.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="22">
+        <h2 class="nome-receita">Janta Especial 1</h2>
+        <img src="../imagem/janta1.jpg" alt="Janta Especial 1" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/janta1.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="23">
+        <h2 class="nome-receita">Janta Especial 2</h2>
+        <img src="../imagem/janta2.jpg" alt="Janta Especial 2" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/janta2.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="24">
+        <h2 class="nome-receita">Janta Especial 4</h2>
+        <img src="../imagem/janta4.jpg" alt="Janta Especial 4" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/janta4.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="25">
+        <h2 class="nome-receita">Janta Especial 5</h2>
+        <img src="../imagem/janta5.jpg" alt="Janta Especial 5" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/janta5.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="26">
+        <h2 class="nome-receita">Lasanha Kids</h2>
+        <img src="../imagem/massa2.jpeg" alt="Lasanha Kids" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/lasanha.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <div class="item-receita" data-id="27">
+        <h2 class="nome-receita">Mocotó Especial</h2>
+        <img src="../imagem/mocaar.jpeg" alt="Mocotó Especial" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/mocoto.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="categorias-rodape">
+    <div class="categoria-item">
+      <a href="../categorias/cafe.html">
+        <img src="../imagem/basic.jpeg" alt="Café da Manhã" />
+        <span>☀️ Café Mágico</span>
+      </a>
+    </div>
+    <div class="categoria-item">
+      <a href="../categorias/almoco.html">
+        <img src="../imagem/massa.jpeg" alt="Almoço" />
+        <span>🍽️ Almoço Turbo</span>
+      </a>
+    </div>
+    <div class="categoria-item">
+      <a href="../categorias/lanche1.html">
+        <img src="../imagem/sandu.jpeg" alt="Lanche Manhã" />
+        <span>🥪 Lanche Aventura</span>
+      </a>
+    </div>
+    <div class="categoria-item">
+      <a href="../categorias/lanche2.html">
+        <img src="../imagem/fruta.jpeg" alt="Lanche Tarde" />
+        <span>🍎 Lanche Power</span>
+      </a>
+    </div>
+    <div class="categoria-item">
+      <a href="../categorias/janta.html">
+        <img src="../imagem/janta1.jpg" alt="Janta" />
+        <span>🌙 Janta Alegria</span>
+      </a>
+    </div>
+    <div class="categoria-item">
+      <a href="../categorias/doce.html">
+        <img src="../imagem/doce1.png" alt="Doces" />
+        <span>🍰 Docinho Nutri</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/script2.js"></script>
+  
+
+</body>
+</html>

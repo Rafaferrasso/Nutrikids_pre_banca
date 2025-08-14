@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👤 Meu Perfil - Nutri Kids</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/feed.css" />
+
+  <link rel="icon" href="../imagem/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .perfil-header {
+      background: linear-gradient(135deg, #a3f7f7 0%, #d0fcfc 100%);
+      padding: 2rem;
+      text-align: center;
+      color: #333;
+      margin-bottom: 2rem;
+      border-radius: 15px;
+      margin: 1rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .foto-perfil {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid #a44dd8;
+      margin-bottom: 1rem;
+    }
+    
+    .perfil-header h1 {
+      color: #a44dd8;
+      font-family: 'Irish Grover', cursive;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .perfil-header p {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .btn-nova-receita {
+      background: linear-gradient(135deg, #a44dd8, #7c3aed);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(164, 77, 216, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    
+    .btn-nova-receita:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(164, 77, 216, 0.4);
+    }
+    
+    .minhas-receitas {
+      margin: 2rem 1rem;
+    }
+    
+    .secao-titulo {
+      font-size: 1.8rem;
+      color: #a44dd8;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-family: 'Irish Grover', cursive;
+    }
+    
+    /* Usando o mesmo estilo do feed para as receitas do usuário */
+    .lista-receitas-usuario {
+      padding: 30px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .receita-usuario {
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      overflow: hidden;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .receita-usuario:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(164, 77, 216, 0.15);
+      border-color: #a3f7f7;
+    }
+    
+    .receita-usuario img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #f0f0f0;
+      transition: all 0.3s ease;
+      display: block;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .receita-usuario img:hover {
+      transform: scale(1.03);
+      border-color: #a3f7f7;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .receita-usuario h3 {
+      color: #333;
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      text-align: center;
+      font-weight: normal;
+    }
+    
+    
+    .receita-usuario p {
+      color: #666;
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+      display: none; /* Esconder parágrafos */
+    }
+    
+    .botoes-usuario {
+      display: flex;
+      gap: 5px;
+      margin-top: auto;
+      padding-top: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn-editar, .btn-excluir {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 11px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    
+    .btn-editar {
+      background: linear-gradient(135deg, #ffa726, #ff9800);
+      color: white;
+    }
+    
+    .btn-editar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 167, 38, 0.4);
+    }
+    
+    .btn-excluir {
+      background: linear-gradient(135deg, #ff6b9d, #e74c3c);
+      color: white;
+    }
+    
+    .btn-excluir:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+    }
+    
+    .vazio-estado {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #666;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      margin: 2rem;
+    }
+    
+    .vazio-estado i {
+      font-size: 4rem;
+      color: #a3f7f7;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .vazio-estado p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .lista-receitas-usuario {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 20px;
+      }
+      
+      .receita-usuario {
+        padding: 12px;
+        min-height: 160px;
+      }
+      
+      .receita-usuario img {
+        height: 120px;
+      }
+      
+      .botoes-usuario {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .botoes-usuario button {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .btn-nova-receita {
+        width: 90%;
+        margin: 1rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="btn-menu">☰</button>
+    <h1 class="titulo">Nutri Kids</h1>
+    <nav id="menu" class="menu-oculto">
+      <ul>
+        <li><a href="feed.html">🏠 Feed Principal</a></li>
+        <li><a href="../categorias/cafe.html">☀️ Café da Manhã</a></li>
+        <li><a href="../categorias/lanche1.html">🍎 Lanche da Manhã</a></li>
+        <li><a href="../categorias/almoco.html">🍽️ Almoço Nutritivo</a></li>
+        <li><a href="../categorias/lanche2.html">🥪 Lanche da Tarde</a></li>
+        <li><a href="../categorias/janta.html">🌙 Janta Alegria</a></li>
+        <li><a href="../categorias/doce.html">🍰 Docinho Nutri</a></li>
+        <li><a href="usuario.html">👤 Meu Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cabeçalho do Perfil -->
+    <div class="perfil-header">
+      <img src="../imagem/user.png" alt="Foto do Usuário" class="foto-perfil">
+      <h1>👋 Olá, <span id="nomeUsuario">Chef Kids</span>!</h1>
+      <p>Compartilhe suas criações culinárias inspiradas nas receitas do Nutri Kids!</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-nova-receita" onclick="document.getElementById('uploadFoto').click()" style="background: linear-gradient(135deg, #ffa726, #ff9800);">
+          <i class="fas fa-camera"></i> Nova Foto
+        </button>
+      </div>
+      <input type="file" id="uploadFoto" accept="image/*" style="display: none;" onchange="processarFoto(this)">
+    </div>
+
+    <!-- Seção Minhas Receitas -->
+    <div class="minhas-receitas">
+      <h2 class="secao-titulo">🍽️ Minhas Receitas</h2>
+      <div id="lista-receitas-usuario" class="lista-receitas-usuario">
+        <!-- Receitas do usuário serão carregadas aqui dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/script2.js"></script>
+  <script>
+    // Variável global para usuário atual
+    let usuarioAtual = { id: 1, name: 'Chef Kids' }; // Usuário padrão
+
+    // Função para carregar informações do usuário
+    async function carregarUsuario() {
+      try {
+        // Tentar carregar do localStorage primeiro
+        const userLocal = localStorage.getItem('usuarioLogado');
+        if (userLocal) {
+          usuarioAtual = JSON.parse(userLocal);
+          console.log('Usuário carregado do localStorage:', usuarioAtual);
+          document.getElementById('nomeUsuario').textContent = usuarioAtual.name || 'Chef Kids';
+          return;
+        }
+
+        // Se não houver no localStorage, tentar da API (se implementada)
+        console.log('Tentando carregar usuário da API...');
+        const response = await fetch('http://localhost:3000/user/1');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            usuarioAtual = data.user;
+            document.getElementById('nomeUsuario').textContent = usuarioAtual.name || 'Chef Kids';
+            // Salvar no localStorage para próximas visitas
+            localStorage.setItem('usuarioLogado', JSON.stringify(usuarioAtual));
+          }
+        }
+      } catch (error) {
+        console.log('Usando usuário padrão:', error);
+        // Usar nome padrão se não conseguir carregar
+        document.getElementById('nomeUsuario').textContent = 'Chef Kids';
+      }
+    }
+
+    // Função para processar foto selecionada - agora cria receita diretamente
+    function processarFoto(input) {
+      const file = input.files[0];
+      if (file) {
+        // Validar se é realmente uma imagem
+        if (!file.type.startsWith('image/')) {
+          alert('❌ Por favor, selecione apenas arquivos de imagem (JPG, PNG, GIF, etc.)');
+          input.value = ''; // Limpar o input
+          return;
+        }
+        
+        // Validar tamanho (máximo 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert('❌ A imagem é muito grande! Selecione uma imagem menor que 5MB.');
+          input.value = ''; // Limpar o input
+          return;
+        }
+        
+        // Criar receita automaticamente com a foto
+        criarReceitaComFoto(file);
+      }
+    }
+
+    // Função para criar receita automaticamente com a foto selecionada
+    async function criarReceitaComFoto(arquivo) {
+      const nomeReceita = `📸 Foto de ${usuarioAtual.name || 'Chef Kids'} - ${new Date().toLocaleDateString('pt-BR')}`;
+      
+      const formData = new FormData();
+      formData.append('nome', nomeReceita);
+      formData.append('categoria', 'doce'); // Categoria padrão
+      formData.append('ingredientes', 'Ingredientes não especificados');
+      formData.append('descricao', 'Deliciosa criação culinária compartilhada pelo chef!');
+      formData.append('inspiracao', '');
+      formData.append('userId', usuarioAtual.id);
+      formData.append('imagemReceita', arquivo);
+
+      try {
+        console.log('🚀 Salvando foto automaticamente...');
+        
+        const response = await fetch('http://localhost:3000/user-recipes', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          console.log('✅ Foto salva com sucesso!');
+          
+          // Mostrar notificação de sucesso
+          mostrarNotificacao('🎉 Sua foto foi adicionada com sucesso!', 'sucesso');
+          
+          // Recarregar receitas para mostrar a nova foto
+          setTimeout(() => {
+            carregarReceitas();
+          }, 500);
+        } else {
+          console.error('❌ Erro ao salvar foto:', data.message);
+          
+          // Fallback: salvar no localStorage
+          salvarFotoLocalmente(arquivo, nomeReceita);
+        }
+
+      } catch (error) {
+        console.error('❌ Erro ao conectar com servidor:', error);
+        
+        // Fallback: salvar no localStorage
+        salvarFotoLocalmente(arquivo, nomeReceita);
+      }
+      
+      // Limpar input
+      document.getElementById('uploadFoto').value = '';
+    }
+
+    // Função para salvar foto no localStorage como fallback
+    function salvarFotoLocalmente(arquivo, nomeReceita) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const novaReceita = {
+          id: Date.now(),
+          name: nomeReceita,
+          category: 'doce',
+          ingredients: 'Ingredientes não especificados',
+          description: 'Deliciosa criação culinária compartilhada pelo chef!',
+          inspiration: '',
+          image_path: e.target.result, // Base64 da imagem
+          created_at: new Date().toISOString(),
+          user_id: usuarioAtual.id
+        };
+        
+        // Salvar no localStorage
+        let receitasLocal = JSON.parse(localStorage.getItem('receitasUsuario')) || [];
+        receitasLocal.push(novaReceita);
+        localStorage.setItem('receitasUsuario', JSON.stringify(receitasLocal));
+        
+        mostrarNotificacao('📱 Sua foto foi salva localmente!', 'sucesso');
+        carregarReceitas();
+      };
+      reader.readAsDataURL(arquivo);
+    }
+
+    // Função para mostrar notificações
+    function mostrarNotificacao(mensagem, tipo = 'sucesso') {
+      const notificacao = document.createElement('div');
+      notificacao.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${tipo === 'sucesso' ? 'linear-gradient(135deg, #4CAF50, #45a049)' : 'linear-gradient(135deg, #f44336, #d32f2f)'};
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 10000;
+        font-weight: bold;
+        animation: slideIn 0.3s ease;
+      `;
+      notificacao.textContent = mensagem;
+      
+      // Adicionar animação CSS
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes slideIn {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      document.body.appendChild(notificacao);
+      
+      // Remover após 3 segundos
+      setTimeout(() => {
+        notificacao.style.animation = 'slideIn 0.3s ease reverse';
+        setTimeout(() => {
+          if (notificacao.parentNode) {
+            notificacao.parentNode.removeChild(notificacao);
+          }
+        }, 300);
+      }, 3000);
+    }
+
+    // Função para carregar receitas do usuário via API
+    async function carregarReceitas() {
+      try {
+        // Usar o ID do usuário atual se disponível
+        const userId = usuarioAtual.id || 1;
+        console.log('Carregando receitas para usuário ID:', userId);
+        
+        const response = await fetch(`http://localhost:3000/user-recipes/${userId}`);
+        const data = await response.json();
+
+        if (data.success) {
+          console.log('Receitas carregadas da API:', data.recipes);
+          exibirReceitas(data.recipes);
+        } else {
+          console.error('Erro ao carregar receitas:', data.message);
+          // Fallback para localStorage se houver erro na API
+          const receitasLocal = JSON.parse(localStorage.getItem('receitasUsuario')) || [];
+          exibirReceitas(receitasLocal);
+        }
+      } catch (error) {
+        console.error('Erro ao conectar com API:', error);
+        // Fallback para localStorage se API não estiver disponível
+        const receitasLocal = JSON.parse(localStorage.getItem('receitasUsuario')) || [];
+        exibirReceitas(receitasLocal);
+      }
+    }
+
+    // Função para exibir receitas do usuário
+    function exibirReceitas(receitas) {
+      const container = document.getElementById('lista-receitas-usuario');
+      
+      if (!receitas || receitas.length === 0) {
+        container.innerHTML = `
+          <div class="vazio-estado">
+            <i class="fas fa-utensils"></i>
+            <p>Você ainda não criou nenhuma receita.</p>
+            <p>Que tal começar criando sua primeira receita?</p>
+          </div>
+        `;
+        return;
+      }
+
+      const categoriasEmojis = {
+        'cafe': '☀️ Café da Manhã',
+        'lanche1': '🍎 Lanche da Manhã',
+        'almoco': '🍽️ Almoço Nutritivo',
+        'lanche2': '🥪 Lanche da Tarde',
+        'janta': '🌙 Janta Alegria',
+        'doce': '🍰 Docinho Nutri'
+      };
+
+      container.innerHTML = receitas.map(receita => {
+        const dataFormatada = receita.created_at ? 
+          new Date(receita.created_at).toLocaleDateString('pt-BR') : 
+          receita.dataCreacao || 'Data não disponível';
+        
+        // Corrigir caminho da imagem - VERSÃO MELHORADA
+        let imagemSrc = '../imagem/basic.jpeg'; // Imagem padrão
+        
+        if (receita.image_path) {
+          console.log('Caminho original da imagem:', receita.image_path);
+          
+          // Se a imagem está na pasta uploads (vem da API)
+          if (receita.image_path.includes('uploads/')) {
+            // Extrair apenas o nome do arquivo da pasta uploads
+            const nomeArquivo = receita.image_path.split('uploads/').pop();
+            imagemSrc = `../imagem/uploads/${nomeArquivo}`;
+            console.log('Caminho ajustado para uploads:', imagemSrc);
+          }
+          // Se começa com /front/imagem/ (caminho absoluto do servidor)
+          else if (receita.image_path.startsWith('/front/imagem/')) {
+            imagemSrc = receita.image_path.replace('/front/imagem/', '../imagem/');
+            console.log('Caminho ajustado para relativo:', imagemSrc);
+          }
+          // Se começa com blob: (arquivo local do localStorage)
+          else if (receita.image_path.startsWith('blob:')) {
+            imagemSrc = receita.image_path;
+            console.log('Usando blob URL:', imagemSrc);
+          }
+          // Qualquer outro caso, usar como está
+          else {
+            imagemSrc = receita.image_path;
+            console.log('Usando caminho como está:', imagemSrc);
+          }
+        } else if (receita.imagem) {
+          imagemSrc = receita.imagem;
+          console.log('Usando campo imagem:', imagemSrc);
+        }
+        
+        return `
+          <div class="receita-usuario">
+            <img src="${imagemSrc}" alt="Foto compartilhada" onerror="console.log('Erro ao carregar imagem:', this.src); this.src='../imagem/basic.jpeg'">
+            <h3>${dataFormatada}</h3>
+            <div class="botoes-usuario">
+              <button class="btn-excluir" onclick="excluirReceita(${receita.id})">
+                <i class="fas fa-trash"></i> Excluir
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Função para excluir receita via API
+    async function excluirReceita(id) {
+      if (!confirm('Tem certeza que deseja excluir esta receita?')) {
+        return;
+      }
+
+      try {
+        const response = await fetch(`http://localhost:3000/user-recipes/${id}`, {
+          method: 'DELETE'
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          alert('✅ Receita excluída com sucesso!');
+          carregarReceitas(); // Recarregar lista
+        } else {
+          alert('❌ Erro ao excluir receita: ' + data.message);
+        }
+      } catch (error) {
+        console.error('Erro ao excluir receita:', error);
+        alert('❌ Erro ao conectar com o servidor.');
+      }
+    }
+
+    // Carregar usuário e receitas ao abrir a página
+    document.addEventListener('DOMContentLoaded', async function() {
+      console.log('🚀 Página do usuário carregada!');
+      
+      // Primeiro carregar informações do usuário
+      await carregarUsuario();
+      console.log('Usuário atual após carregamento:', usuarioAtual);
+      
+      // Depois carregar as receitas
+      setTimeout(() => {
+        carregarReceitas();
+      }, 100);
+    });
+  </script>
+</body>
+</html>

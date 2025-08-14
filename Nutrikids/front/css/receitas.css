@@ -1,0 +1,420 @@
+/* ===== NUTRI KIDS - RECEITAS COMPLETAS CSS ===== */
+
+.receita-completa {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-voltar-receita {
+  background: linear-gradient(135deg, #a44dd8, #7c3aed);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar-receita:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(164, 77, 216, 0.3);
+}
+
+.cabecalho-receita {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #a3f7f7;
+}
+
+.cabecalho-receita h1 {
+  color: #a44dd8;
+  font-family: 'Irish Grover', cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.descricao-receita {
+  font-size: 1.2em;
+  color: #666;
+  font-style: italic;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.imagem-principal {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 20px auto;
+}
+
+.conteudo-receita {
+  margin-top: 30px;
+}
+
+.secao-ingredientes, .secao-preparo {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.secao-ingredientes h2, .secao-preparo h2 {
+  color: #a44dd8;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lista-ingredientes, .lista-preparo {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.lista-ingredientes li, .lista-preparo li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #333;
+}
+
+.lista-preparo li {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #a3f7f7;
+}
+
+.dicas-nutricionais {
+  background: linear-gradient(135deg, #e8f5e8, #a3f7f7);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.dicas-nutricionais h3 {
+  color: #28a745;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dicas-nutricionais p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .receita-completa {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .cabecalho-receita h1 {
+    font-size: 2em;
+  }
+  
+  .imagem-principal {
+    height: 250px;
+  }
+}
+
+.info-autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.foto-autor-grande {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #a3f7f7;
+}
+
+.info-autor h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.info-autor p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.imagem-principal {
+  text-align: center;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imagem-principal:hover {
+  transform: scale(1.02);
+}
+
+.conteudo-receita {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.secao-ingredientes, .secao-preparo {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.secao-ingredientes h2, .secao-preparo h2 {
+  color: #a44dd8;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista-ingredientes, .lista-preparo {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.lista-ingredientes li, .lista-preparo li {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #333;
+}
+
+.lista-ingredientes li {
+  list-style-type: "🥄 ";
+}
+
+.lista-preparo li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dicas-nutricionais {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #e8f5e8, #a3f7f7);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dicas-nutricionais h3 {
+  color: #28a745;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dicas-nutricionais p {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .conteudo-receita {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .receita-completa {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .cabecalho-receita h1 {
+    font-size: 2.2em;
+  }
+  
+  .imagem-principal {
+    height: 250px;
+  }
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #a3f7f7, #d0fcfc);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.item-info i {
+  color: #a44dd8;
+}
+
+.secao-ingredientes,
+.secao-preparo,
+.dicas-chef {
+  margin-bottom: 30px;
+}
+
+.secao-ingredientes h2,
+.secao-preparo h2,
+.dicas-chef h2 {
+  color: #a44dd8;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #a3f7f7;
+}
+
+.secao-ingredientes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secao-ingredientes li {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  margin-bottom: 8px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #a3f7f7;
+  transition: transform 0.2s ease;
+}
+
+.secao-ingredientes li:hover {
+  transform: translateX(5px);
+}
+
+.secao-ingredientes li::before {
+  content: "✓ ";
+  color: #a44dd8;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.secao-preparo ol {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.secao-preparo li {
+  counter-increment: step-counter;
+  background: linear-gradient(135deg, #fff, #f8fafc);
+  margin-bottom: 15px;
+  padding: 15px 20px 15px 60px;
+  border-radius: 10px;
+  border-left: 4px solid #a44dd8;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.secao-preparo li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #a44dd8, #7c3aed);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dicas-chef {
+  background: linear-gradient(135deg, #fff7ed, #fed7aa);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #f59e0b;
+}
+
+.dicas-chef h2 {
+  color: #f59e0b;
+  border-bottom-color: #fed7aa;
+}
+
+.dicas-chef p {
+  color: #92400e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsividade para receitas */
+@media (max-width: 768px) {
+  .receita-completa {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .cabecalho-receita h1 {
+    font-size: 2em;
+  }
+  
+  .info-autor {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-nutricional {
+    gap: 15px;
+  }
+  
+  .item-info {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .imagem-principal img {
+    height: 250px;
+  }
+}

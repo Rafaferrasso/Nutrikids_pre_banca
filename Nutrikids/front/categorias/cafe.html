@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☀️ Café da Manhã - Nutri Kids</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/feed.css" />
+
+  <link rel="icon" href="../imagem/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <button id="btn-menu">☰</button>
+    <h1 class="titulo">Nutri Kids</h1>
+    <nav id="menu" class="menu-oculto">
+      <ul>
+        <li><a href="../home/feed.html">🏠 Feed Principal</a></li>
+        <li><a href="../categorias/cafe.html">☀️ Café da Manhã</a></li>
+        <li><a href="../categorias/lanche1.html">🍎 Lanche da Manhã</a></li>
+        <li><a href="../categorias/almoco.html">🍽️ Almoço Nutritivo</a></li>
+        <li><a href="../categorias/lanche2.html">🥪 Lanche da Tarde</a></li>
+        <li><a href="../categorias/janta.html">🌙 Janta Alegria</a></li>
+        <li><a href="../categorias/doce.html">🍰 Docinho Nutri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="categoria-header">
+      <h1>☀️ Café da Manhã</h1>
+      <p>Deliciosas opções para começar o dia com energia!</p>
+    </div>
+    
+    <div class="lista-receitas">
+      <!-- PANQUECA DIVERTIDA -->
+      <div class="item-receita" data-id="1">
+        <h2>Panqueca Divertida</h2>
+        <img src="../imagem/panqueca.jpeg" alt="Panqueca Divertida" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/panqueca.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <!-- PÃOZINHO MÁGICO -->
+      <div class="item-receita" data-id="2">
+        <h2>Pãozinho Mágico</h2>
+        <img src="../imagem/paoinfatil.webp" alt="Pãozinho Mágico" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/pao.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <!-- VITAMINA DE FRUTAS -->
+      <div class="item-receita" data-id="8">
+        <h2>Vitamina de Frutas</h2>
+        <img src="../imagem/fruta.jpeg" alt="Vitamina de Frutas" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/vitamina.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <!-- IOGURTE COM GRANOLA -->
+      <div class="item-receita" data-id="4">
+        <h2>Iogurte com Granola</h2>
+        <img src="../imagem/iogurte.webp" alt="Iogurte com Granola" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/iogurte.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+
+      <!-- PÃOZINHO ESPECIAL -->
+      <div class="item-receita" data-id="14">
+        <h2>Pãozinho Especial</h2>
+        <img src="../imagem/paochoc.png" alt="Pãozinho Especial" class="imagem-receita" />
+        <div class="botoes">
+          <button class="btn-curtir">
+            <i class="fas fa-heart"></i> Curtir
+          </button>
+          <button class="btn-comentar">
+            <i class="fas fa-comment"></i> Comentar
+          </button>
+          <button class="btn-visualizar" onclick="window.location.href='../receitas/paozinho.html'">
+            <i class="fas fa-eye"></i> Ver Receita
+          </button>
+        </div>
+        <div class="area-comentarios"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/script2.js"></script>
+</body>
+</html>
