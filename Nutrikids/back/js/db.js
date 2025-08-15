@@ -4,7 +4,7 @@ const mysql = require('mysql2/promise');
 const dbConfig = {
   host: 'localhost',
   user: 'root',
-  password: 'root', // Ajuste esta senha conforme sua configuração do MySQL
+  password: 'rafaferrasso10', // Ajuste esta senha conforme sua configuração do MySQL
   database: 'nutrikids', // Mesmo nome usado no script SQL
   port: 3306,
   multipleStatements: true

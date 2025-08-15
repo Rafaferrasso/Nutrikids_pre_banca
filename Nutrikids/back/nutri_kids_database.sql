@@ -1,9 +1,7 @@
--- Script SQL Nutri Kids - Versão Atualizada
--- Criar banco de dados sem apagar os existentes
 CREATE DATABASE IF NOT EXISTS nutrikids;
 USE nutrikids;
 
--- Criar tabela de usuários apenas se não existir (preserva usuários existentes)
+-- Criar tabela de usuários 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
